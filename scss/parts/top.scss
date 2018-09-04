@@ -1,0 +1,104 @@
+/* Top
+-------------------------------------------------------------------------------*/
+.top {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 46.2em;
+	display: table;
+	&_wrap {
+		@media (max-width: 1366px) {
+		    margin: 0 -15px;
+		}
+	}
+	@media (max-width: 1620px) {
+		height: 40.1em;
+	}
+	@media (max-width: 1366px) {
+	    height: 38.8em;
+	}
+	@media (max-width: 1199px) {
+	    height: 34.1em;	
+	}
+	@media (max-width: 991px) {
+	    height: 24.4em;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		&.main {
+			background: url('../img/top/top_img1.jpg') no-repeat center center;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #0b154d;
+			opacity: 0.3;
+		}
+	}
+	&__content {
+		padding: 15px;
+		display: table-cell;
+		color: $color_white;
+		text-align: center;
+		vertical-align: middle;
+	}
+	&__h {
+		margin-bottom: 0.4em;
+		font-size: 6.25em;
+		font-weight: 900;
+		text-transform: uppercase;
+		display: inline-block;
+		@media (max-width: 1199px) {
+			font-size: 4.25em;
+		}
+		@media (max-width: 991px) {
+			font-size: 3em;
+		}
+		@media (max-width: 767px) {
+			font-size: 2.6em;
+		}
+	}
+	&__sub {
+		font-size: 2.8em;
+		font-weight: 300;
+		@media (max-width: 1199px) {
+			font-size: 2.4em;
+		}
+		@media (max-width: 991px) {
+			font-size: 2em;
+		}
+		@media (max-width: 767px) {
+			font-size: 1.6em;
+		}
+		&_link {
+			display: inline-block;
+			padding: 0.2em 0.5em;
+			margin-left: 0.6em;
+			cursor: default;
+			color: $color_white;
+			font-size: 1em;
+			font-family: "Roboto Slab";
+			font-weight: 300;
+			background-color: $color_primary;
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+			}
+			@media (max-width: 767px) {
+				display: inline-block;
+				margin-top: 0.3em;
+				margin-left: 0;
+			}
+		}
+	}
+}

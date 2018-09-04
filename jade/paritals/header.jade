@@ -1,0 +1,38 @@
+// begin header 
+header.header
+	.container_center
+
+		a.header__logo(href="/")
+			img(src="img/logo.svg")
+
+		// begin navbar
+		.navbar__toggle_wrap.js__navbar-toggle
+			a.navbar__toggle(href="#navbar")
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+
+		.header__right#navbar.js-navbar
+			ul.navbar
+				li.navbar__item
+					a.navbar__link.active(href="#") Home
+				li.navbar__item
+					a.navbar__link(href="#") About us
+				li.navbar__item
+					a.navbar__link(href="#") Products
+				li.navbar__item
+					a.navbar__link(href="#") News
+				li.navbar__item
+					a.navbar__link(href="#") Career
+				li.navbar__item
+					a.navbar__link(href="#") Contacts
+
+			.language.header__language
+				a.language__toggle.js-language__toggle(href="#") En
+					span.language__toggle_caret.icon-dropdown
+				.language__menu
+					a.language__menu_item.active(href="#") En
+					a.language__menu_item(href="#") Ru
+		// end navbar 
+
+// end header 

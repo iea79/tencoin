@@ -1,0 +1,61 @@
+/* Footer
+ ----------------------------------------------------------------------------- */
+.footer {
+	@extend %clear_a;
+	&__left {
+		padding: 3.15em 0;
+		width: 24%;
+		float: left;
+		@media (max-width: 767px) {
+			padding: 1.5em 0;
+			width: 100%;
+			float: none;
+		}
+	}
+	&__logo {
+		width: 6.7em;
+		display: block;
+		&_img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__right {
+		padding: 3.4em 0;
+		overflow: hidden;
+		@extend %clear_all;
+		@media (max-width: 767px) {
+			padding: 0 0 2em;
+		}
+	}
+	&__copyright {
+		float: left;
+		@media (max-width: 480px) {
+			float: none;
+			margin-bottom: 1em;
+		}
+	}
+	&__rules {
+		float: right;
+		@extend %clear_a;
+		@media (max-width: 480px) {
+			float: none;
+		}
+		&_item {
+			float: left;
+			margin-left: 3em;
+			@media (max-width: 480px) {
+				margin-left: 0;
+				margin-right: 3em;
+			}
+		}
+		&_link {
+			color: #666;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+

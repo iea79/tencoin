@@ -1,0 +1,152 @@
+.form {
+	@extend %clear_a;
+	&__row {
+		margin-bottom: 15px;
+		@extend %clear_a;
+		input:not([type]),
+		input[type=text],
+		input[type=password],
+		input[type=email],
+		input[type=url],
+		input[type=search],
+		input[type=tel],
+		input[type=number],
+		input[type=datetime], 
+		textarea,
+		.btn {
+			width: 100%;
+		}
+		textarea {
+			max-width: 100%;
+			max-width: 100%;
+			min-height: 15px;
+		}
+	}
+	&__label {
+		
+	}
+}
+// Input text and textarea ================================================
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=number],
+input[type=datetime], 
+textarea {
+	background-color: $color_primary;
+	border-bottom: 1px solid $color_white;
+	padding-bottom: 0.55em;
+	outline: none;
+	color: $color_white;
+	font-size: 1em;
+	font-weight: 300;
+	font-family: $main_font_family;
+	line-height: 1.438em;
+	border-radius: 0;
+	transition: all .3s;
+	&:hover {
+		border-bottom: 1px solid $color_white;
+		background-color: $color_primary;
+	}
+	&:focus {
+		border-bottom: 1px solid $color_white;
+		background-color: $color_primary;
+	}
+	&.invalid {
+		background-color: #fff0f0;
+		border: 1px solid red;
+	}
+	// Placeholder for input +++++++++++++++
+	@include placeholder {
+		color: $input_placeholder_color;
+	}
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+// Input checkbox and radio ===============================================
+input[type=checkbox],
+input[type=radio] {
+	padding: 0;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border: 1px solid #aaa;
+    overflow: hidden;
+    margin-top: -4px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    outline: 0;
+    background: 0 0;
+    text-align: center;
+    position: relative;
+	&:not(:disabled),
+	&:not(:disabled) {
+	    cursor: pointer;
+	}
+	&:before,
+	&:before {
+	    display: block;
+	}
+	&:disabled,
+	&:disabled {
+	    border-color: #ddd;
+	}
+}
+
+input[type=radio] {
+    border-radius: 50%;
+	&:checked:before {
+	    content: '';
+	    width: 6px;
+	    height: 6px;
+	    top: 50%;
+	    left: 50%;
+	    margin-top: -3px;
+	    margin-left: -3px;
+	    display: block;
+	    position: absolute;
+	    border-radius: 50%;
+	    background: #000;
+	}
+	&:disabled:checked:before {
+	    background-color: #aaa;
+	}
+}
+
+input[type=checkbox] {
+	&:checked:before,
+	&:indeterminate:before {
+	    content: "\2714";
+	    font-size: 12px;
+	    -webkit-font-smoothing: antialiased;
+	    text-align: center;
+	    line-height: 13px;
+	    color: #000;
+	}
+
+	&:indeterminate:before {
+	    content: "\f068";
+	}
+	&:disabled:checked:before,
+	&:disabled:indeterminate:before {
+	    color: #aaa;
+	}
+}
+
+
+
+
+

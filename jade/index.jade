@@ -1,0 +1,263 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+
+block title
+	title Home
+
+block content
+
+	.container_center
+
+		// begin .top
+		.top_wrap
+			.top
+				.top__bg.main
+				.top__content
+					.top__h Developing the future
+					.top__sub Software solution for 
+						a.top__sub_link(href="#") &lt; fintech &gt;
+		// end .top
+
+
+		// begin .follow
+		.follow
+			p.follow__p Follow Tencoins
+			ul.follow__soc
+				li.follow__soc_item
+					a.follow__soc_link(href="#")
+						span.icon-m.follow__soc_icon
+				li.follow__soc_item
+					a.follow__soc_link(href="#")
+						span.icon-facebook.follow__soc_icon
+				li.follow__soc_item
+					a.follow__soc_link(href="#")
+						span.icon-twitter.follow__soc_icon
+				li.follow__soc_item
+					a.follow__soc_link(href="#")
+						span.icon-instagram.follow__soc_icon
+		// end .follow
+
+
+		// begin .company
+		.company
+			.company__left
+				h2.company__h2 Сompany
+				p.company__p Tencoins is an international IT company that specializes in Internet-related services and products, which include trading, payment and gambling platforms.
+
+				p.company__p_bold Our solution maybe interested for
+
+				ul.company__interest
+					li.company__interest_item
+						.company__interest_number 01
+						.company__interest_info people who are just starting to discover cryptocurrencies
+					li.company__interest_item
+						.company__interest_number 02
+						.company__interest_info professional and amateur traders
+					li.company__interest_item
+						.company__interest_number 03
+						.company__interest_info people interested in blockchain technologies
+					li.company__interest_item
+						.company__interest_number 04
+						.company__interest_info investors
+					li.company__interest_item
+						.company__interest_number 05
+						.company__interest_info various projects using cryptocurrencies
+
+			.company__right
+				.company__right_h Our key area of expertise is
+				a.company__right_link(href="#") &lt; developing software solutions &gt;
+				.company__right_p for the new e-economy, including cryptocurrency market
+				.company__right_down
+		// end .company
+
+
+	// begin .slider
+	.slider__bg
+		.slider
+			.slider__left
+				h2.slider__h2 Products
+				p See our current products
+				.slider__arrows
+					a.slider__arrow.js-slider__prev(href="#")
+						span.icon-slide_prev
+					a.slider__arrow.js-slider__next(href="#")
+						span.icon-slide_next
+
+			.slider__right
+				.slider__home_wrap
+					.slider__home.js-slider__home
+						.js-slide
+							a.slider__home_item(href="#")
+								img.slider__home_img(src="img/products/product1.jpg", alt="")
+								.slider__home_h P2P exchange platform
+						.js-slide
+							a.slider__home_item(href="#")
+								img.slider__home_img(src="img/products/product2.jpg", alt="")
+								.slider__home_h Announcement Q1 2019
+						.js-slide
+							a.slider__home_item(href="#")
+								img.slider__home_img(src="img/products/product3.jpg", alt="")
+								.slider__home_h Announcement Q3 2019
+						.js-slide
+							a.slider__home_item(href="#")
+								img.slider__home_img(src="img/products/product1.jpg", alt="")
+								.slider__home_h P2P exchange platform
+						.js-slide
+							a.slider__home_item(href="#")
+								img.slider__home_img(src="img/products/product2.jpg", alt="")
+								.slider__home_h Announcement Q1 2019
+						.js-slide
+							a.slider__home_item(href="#")
+								img.slider__home_img(src="img/products/product3.jpg", alt="")
+								.slider__home_h Announcement Q3 2019
+	// end .slider
+
+	
+	.container_center
+
+		// begin .slider
+		.slider.slider__news
+			.slider__left
+				h2.slider__h2 News
+				p Read our last news
+				.slider__arrows
+					a.slider__arrow.js-slider__news_prev(href="#")
+						span.icon-slide_prev
+					a.slider__arrow.js-slider__news_next(href="#")
+						span.icon-slide_next
+
+			.slider__right
+				.slider__home_wrap
+					.slider__home.js-slider__news
+						.js-slide
+							.slider__home_item
+								a(href="#")
+									img.slider__home_img(src="img/news/news1.jpg", alt="")
+								.slider__news_info
+									.slider__news_info_date
+										span.icon-calendar
+										|12.04.18
+									.slider__news_info_eye
+										span.icon-eye
+										|15
+								a.slider__home_h.slider__news_h(href="#") A Brief History of Money from Barter to Bitcoin
+								p.slider__news_p We use money almost every day of our lives but have you ever wondered what it is or why we have it?
+								a.slider__news_btn.btn(href="#") More
+						.js-slide
+							.slider__home_item
+								a(href="#")
+									img.slider__home_img(src="img/news/news2.jpg", alt="")
+								.slider__news_info
+									.slider__news_info_date
+										span.icon-calendar.slider__news_info_date_icon 
+										|12.04.18
+									.slider__news_info_eye
+										span.icon-eye.slider__news_info_eye
+										|15
+								a.slider__home_h.slider__news_h(href="#") How Have Cryptocurrencies Affected Global Finance? 
+								p.slider__news_p Cryptocurrencies are still in their infancy, however, they have already managed to have a significant impact on global finance
+								a.slider__news_btn.btn(href="#") More
+						.js-slide
+							.slider__home_item
+								a(href="#")
+									img.slider__home_img(src="img/news/news3.jpg", alt="")
+								.slider__news_info
+									.slider__news_info_date
+										span.icon-calendar
+										span.slider__news_info_day 12.04.18
+									.slider__news_info_eye
+										span.icon-eye
+										span.slider__news_info_number 15
+								a.slider__home_h.slider__news_h(href="#") Why Malta?
+								p.slider__news_p Sun, sea, sand and security: Why Malta is one of the best places in the world to live and work
+								a.slider__news_btn.btn(href="#") More
+						.js-slide
+							.slider__home_item
+								a(href="#")
+									img.slider__home_img(src="img/news/news1.jpg", alt="")
+								.slider__news_info
+									.slider__news_info_date
+										span.icon-calendar
+										|12.04.18
+									.slider__news_info_eye
+										span.icon-eye
+										|15
+								a.slider__home_h.slider__news_h(href="#") A Brief History of Money from Barter to Bitcoin
+								p.slider__news_p We use money almost every day of our lives but have you ever wondered what it is or why we have it?
+								a.slider__news_btn.btn(href="#") More
+						.js-slide
+							.slider__home_item
+								a(href="#")
+									img.slider__home_img(src="img/news/news2.jpg", alt="")
+								.slider__news_info
+									.slider__news_info_date
+										span.icon-calendar.slider__news_info_date_icon 
+										|12.04.18
+									.slider__news_info_eye
+										span.icon-eye.slider__news_info_eye
+										|15
+								a.slider__home_h.slider__news_h(href="#") How Have Cryptocurrencies Affected Global Finance? 
+								p.slider__news_p Cryptocurrencies are still in their infancy, however, they have already managed to have a significant impact on global finance
+								a.slider__news_btn.btn(href="#") More
+						.js-slide
+							.slider__home_item
+								a(href="#")
+									img.slider__home_img(src="img/news/news3.jpg", alt="")
+								.slider__news_info
+									.slider__news_info_date
+										span.icon-calendar
+										span.slider__news_info_day 12.04.18
+									.slider__news_info_eye
+										span.icon-eye
+										span.slider__news_info_number 15
+								a.slider__home_h.slider__news_h(href="#") Why Malta?
+								p.slider__news_p Sun, sea, sand and security: Why Malta is one of the best places in the world to live and work
+								a.slider__news_btn.btn(href="#") More
+		// end .slider
+
+
+	// begin .getintouch
+	.getintouch
+		.getintouch__left
+			h2.getintouch__left_h Get in touch
+			.getintouch__left_contacts
+				.getintouch__left_row
+					.getintouch__left_row_par Phone:
+					.getintouch__left_row_value +7 586 969 6363
+				.getintouch__left_row
+					.getintouch__left_row_par E-mail:
+					.getintouch__left_row_value support@tencoins.org
+				.getintouch__left_row
+					.getintouch__left_row_par Address:
+					.getintouch__left_row_value Tencoins Ltd, 75 Triq I-Abate Rigord Level 2, Ta’ Xbiex XBX 1102 Malta
+				.getintouch__left_row
+					.getintouch__left_row_par Telegram:
+					.getintouch__left_row_value @tencoins_org
+				.getintouch__left_row.last
+					.getintouch__left_row_par Follow us:
+					.getintouch__left_row_value
+						ul.follow__soc.getintouch__soc
+							li.follow__soc_item
+								a.follow__soc_link(href="#")
+									span.icon-m.getintouch__soc_icon
+							li.follow__soc_item
+								a.follow__soc_link(href="#")
+									span.icon-facebook.getintouch__soc_icon
+							li.follow__soc_item
+								a.follow__soc_link(href="#")
+									span.icon-twitter.getintouch__soc_icon
+							li.follow__soc_item
+								a.follow__soc_link(href="#")
+									span.icon-instagram.getintouch__soc_icon
+		form.getintouch__right(action="#")
+			.getintouch__right_column
+				input.getintouch__right_input(type="text", placeholder="Name")
+				input.getintouch__right_input(type="tel", placeholder="Phone")
+				textarea.getintouch__right_textarea(placeholder="Your messege")
+			.getintouch__right_column
+				input.getintouch__right_input(type="text", placeholder="Surname")
+				input.getintouch__right_input(type="email", placeholder="E-mail")
+				button.getintouch__right_btn.btn Send
+	// end .getintouch

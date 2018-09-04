@@ -1,0 +1,53 @@
+/* Follow
+-------------------------------------------------------------------------------*/
+.follow {
+	padding: 1.3em 0 6.5em;
+	@extend %clear_a;
+	@media (max-width : 1024px) {
+		padding: 1.3em 0 4em;
+	}
+	&__p {
+		margin: 0;
+		float: left;
+		font-size: 1.3em;
+		line-height: 1.3em;
+		@media (max-width : 480px) {
+			float: none;
+			display: block;
+			margin-bottom: 0.5em;
+		}
+	}
+	&__soc {
+		float: left;
+		padding-left: 0.6em;
+		margin: 0;
+		display: block;
+		@extend %clear_a;
+		@media (max-width : 480px) {
+			float: none;
+			display: block;
+			padding: 0;
+		}
+		&_item {
+			float: left;
+			margin-left: 1.1em;
+			@media (max-width : 480px) {
+				margin-left: 1em;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		&_link {
+			display: block;
+			text-decoration: none;
+			&:hover {
+				text-decoration: none;
+				opacity: 0.8;
+			}
+		}
+		&_icon {
+			font-size: 1.7em;
+		}
+	}
+}

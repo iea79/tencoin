@@ -1,0 +1,42 @@
+/*!
+ *
+ * Evgeniy Ivanov - 2018
+ * busforward@gmail.com
+ * Skype: ivanov_ea
+ *
+ */
+
+@import 'mixins/mixin';
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:300,400,700');
+
+// Mixin for include fonts
+// @include font-face("ArialMT", fonts/CenturyGothic, normal, normal);
+
+ // Import files
+@import 'variables/variables';
+@import 'core/reset';
+@import 'core/icon';
+@import 'core/global';
+@import 'core/template';
+@import 'parts/footer';
+@import 'core/form';
+@import 'core/grid';
+@import 'core/soc';
+@import 'parts/breadcrumb';
+@import 'core/pagination';
+@import 'core/buttons';
+@import 'core/video';
+
+// Libs
+@import 'libs/slick';
+
+// Parts
+@import 'parts/header';
+@import 'parts/top';
+@import 'parts/follow';
+@import 'parts/company';
+@import 'parts/slider';
+@import 'parts/getintouch';

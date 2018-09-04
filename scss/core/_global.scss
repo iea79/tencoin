@@ -1,0 +1,61 @@
+body {
+	color: $main_color;
+	font-size: $main_font_size;
+	font-family: $main_font_family;
+	line-height: $main_line_height;
+	font-weight: 300;
+}
+
+a {
+ 	cursor: pointer;
+ 	&:hover {
+ 		text-decoration: underline;
+ 	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+h2 {
+	position: relative;
+	top: -0.1em;
+	margin: 0 0 1.3em;
+	color: $color_primary;
+	font-family: "Roboto Slab";
+	font-size: 2.9em;
+	font-weight: 400;
+	&:before {
+		content: '<';
+		position: relative;
+		top: -0.07em;
+		margin-right: 0.1em;
+	}
+	@media (max-width : 992px) {
+		font-size: 2.5em;
+	}
+	@media (max-width : 767px) {
+		font-size: 2em;
+	}
+}
+
+p {
+	font-size: 1em;
+	font-weight: 300;
+	@media (max-width: 1366px) {
+		font-size: 1.3em;
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+}
