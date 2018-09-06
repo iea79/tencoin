@@ -162,6 +162,48 @@ $(document).ready(function() {
         $('.js-slider__news').slick('slickNext');
      });
 
+     // Location slider - Career page / Tab Location
+     $('.js__location__slider').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        responsive: [
+        {
+            breakpoint: 767,
+            settings: {
+                dots: false
+            }
+        }
+        ]
+     });
+     $('.js-location__prev').on('click', function() {
+        $('.js__location__slider').slick('slickPrev');
+     });
+
+     $('.js-location__next').on('click', function() {
+        $('.js__location__slider').slick('slickNext');
+     });
+
+
+     // Jobs Collapse
+    $('.js_jobs__collapse').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this),
+            jobId = $this.attr('href');
+
+        if( !$this.hasClass('active') ) {
+            $('.js_jobs__content').slideUp();
+            $('.js_jobs__collapse').removeClass('active');
+        }
+
+        $this.toggleClass('active');
+        $(jobId).slideToggle(200);
+    });
+
+
+
 });
 
 $(window).resize(function(event) {
