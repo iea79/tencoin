@@ -1,0 +1,125 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+
+block title
+	title Tencoin - Career
+
+block content
+
+	.container_center
+
+		// begin .breadcramb
+		.breadcrumb
+			li
+				a(href="#")
+					span.icon-house
+			li.breadcrumb__separator
+				span.icon-arrow
+			li
+				a(href="#") Career
+		// end .breadcramb
+
+
+		// begin .top
+		.top_wrap
+			.top
+				.top__bg.top__bg_career
+				.top__content
+					.top__h2 Сareer
+		// end .top
+
+
+		// begin .career
+		.career
+
+			// begin Nav tabs
+			ul.career__tabs
+				li.career__item
+					a.career__link.active(href="#") Our principles
+				li.career__item
+					a.career__link(href="career__locations.html") Locations
+				li.career__item
+					a.career__link(href="career__jobs.html") Jobs
+				li.career__item
+					a.career__link(href="#") Hiring process
+			// end Nav tabs
+
+			// begin Tab panes
+			.career__content
+				.career__pane
+
+					// begin Principles
+					.page__left
+						h2.page__h2 10-C rule
+						p At ten coins we follow the 10-C rule
+					.page__right
+						h3.page__h3 We are cutting edge, consistent and clever
+						ul.principles
+							li.principles__item
+								.principles__number 01
+								p.principles__p
+									span.principles__p_bold Cutting edge 
+									| - We develop cutting-edge IT solutions with innivative features. We strive to offers products that combine the most modern tecnologies
+							li.principles__item
+								.principles__number 02
+								p.principles__p 
+									span.principles__p_bold Consistent
+									|- We are consistent in what we do and achive our goals. We never stop learning and improving our knowledge and expertise.
+							li.principles__item
+								.principles__number 03
+								p.principles__p 
+									span.principles__p_bold Clever 
+									|- We always try to make clever choices. We take all the decisions based on the fullest amount of information we can find and all the factors that we can take into consideration.
+						h3.page__h3 We are also competent and commeted
+						ul.principles
+							li.principles__item
+								.principles__number 04
+								p.principles__p
+									span.principles__p_bold Competent 
+									|- We make sure we are fully competent in what we do. It all starts with hiring the right people and developing their talents further. A team of competent professionals is what makes us competent on the company level.
+							li.principles__item
+								.principles__number 05
+								p.principles__p 
+									span.principles__p_bold Committed 
+									|- We are committed to the company and its success. We act in the best interest of the company as if it was our own business
+						h3.page__h3 We create, cooperate and care
+						ul.principles
+							li.principles__item
+								.principles__number 06
+								p.principles__p
+									span.principles__p_bold Create 
+									|- We create smart solutions for a better life on everyday basis
+							li.principles__item
+								.principles__number 07
+								p.principles__p
+									span.principles__p_bold Cooperate
+									|- We always value cooperation, both within and between teams and with our external partners. Cooperation is what makes us strong as a company as we believe as a team you can achieve far more than as an individual
+							li.principles__item
+								.principles__number 08
+								p.principles__p
+									span.principles__p_bold Care 
+									|- We care for each other in our professional family. And our employees care for company’s products and users
+						h3.page__h3 We believe in change and can-do attitude, celebrate our success throughout the way
+						ul.principles
+							li.principles__item
+								.principles__number 09
+								p.principles__p
+									span.principles__p_bold Change
+									|- We realize that we live in a changing world and we create products that facilitate changes and make them happen today
+							li.principles__item
+								.principles__number 10
+								p.principles__p
+									span.principles__p_bold Can-do 
+									|- We demonstrate the can-do attitude and get things done
+							li.principles__item
+								.principles__number 11
+								p.principles__p
+									span.principles__p_bold Celebrate
+									|- We work hard but we believe that hard work should be fun work. We always celebrate our success
+					// end Principles
+					
+			// end Tab panes
+
+		// end .career

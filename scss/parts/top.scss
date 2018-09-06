@@ -2,26 +2,31 @@
 -------------------------------------------------------------------------------*/
 .top {
 	position: relative;
+	padding-left: 7.5%;
 	overflow: hidden;
 	width: 100%;
-	height: 46.2em;
+	height: 20.625em;
 	display: table;
+	&_big {
+		height: 46.2em;
+		padding-left: 0;
+		@media (max-width: 1620px) {
+			height: 40.1em;
+		}
+		@media (max-width: 1366px) {
+		    height: 38.8em;
+		}
+		@media (max-width: 1199px) {
+		    height: 34.1em;	
+		}
+		@media (max-width: 991px) {
+		    height: 24.4em;
+		}
+	}
 	&_wrap {
 		@media (max-width: 1366px) {
 		    margin: 0 -15px;
 		}
-	}
-	@media (max-width: 1620px) {
-		height: 40.1em;
-	}
-	@media (max-width: 1366px) {
-	    height: 38.8em;
-	}
-	@media (max-width: 1199px) {
-	    height: 34.1em;	
-	}
-	@media (max-width: 991px) {
-	    height: 24.4em;
 	}
 	&__bg {
 		position: absolute;
@@ -31,8 +36,17 @@
 		width: 100%;
 		height: 100%;
 		background-size: cover;
-		&.main {
+		&_main {
 			background: url('../img/top/top_img1.jpg') no-repeat center center;
+		}
+		&_career {
+			background: url('../img/top/top_img2.jpg') no-repeat center center;
+			@media (max-width: 480px) {
+				background-position: -50em 0;
+			}
+			@media (max-width: 320px) {
+				background-position: -55em 0;
+			}
 		}
 		&:before {
 			content: '';
@@ -65,7 +79,20 @@
 			font-size: 3em;
 		}
 		@media (max-width: 767px) {
-			font-size: 2.6em;
+			// font-size: 2em;
+		}
+	}
+	&__h2 {
+		color: $color_white;
+		font-family: "Roboto Slab";
+		font-size: 3.125em;
+		font-weight: 400;
+		text-align: left;
+		&:before {
+			content: '<';
+			position: relative;
+			top: -0.07em;
+			margin-right: 0.1em;
 		}
 	}
 	&__sub {

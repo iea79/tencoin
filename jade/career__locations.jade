@@ -1,0 +1,95 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+
+block title
+	title Tencoin - Career
+
+block content
+
+	.container_center
+
+		// begin .breadcramb
+		.breadcrumb
+			li
+				a(href="#")
+					span.icon-house
+			li.breadcrumb__separator
+				span.icon-arrow
+			li
+				a(href="#") Career
+		// end .breadcramb
+
+
+		// begin .top
+		.top_wrap
+			.top
+				.top__bg.top__bg_career
+				.top__content
+					.top__h2 Сareer
+		// end .top
+
+
+		// begin .career
+		.career
+
+			// begin Nav tabs
+			ul.career__tabs
+				li.career__item
+					a.career__link(href="career.html") Our principles
+				li.career__item
+					a.career__link.active(href="#") Locations
+				li.career__item
+					a.career__link(href="career__jobs.html") Jobs
+				li.career__item
+					a.career__link(href="#") Hiring process
+			// end Nav tabs
+
+			// begin Tab panes
+			.career__content
+
+				.career__pane
+
+					// begin location
+					.page__left
+						h2.page__h2 About Malta
+					.page__right
+						.location__slider_wrap
+							.location__arrows
+								a.location__arrow.js-location__prev(href="#")
+									span.icon-slide_prev
+								a.location__arrow.js-location__next(href="#")
+									span.icon-slide_next
+							.location__slider.js__location__slider
+								.js__slide
+									.location__slider_item
+										img.location__img(src="img/location/location1.jpg", alt="")
+										.location__info Boats off the coast of Malta
+								.js__slide
+									.location__slider_item
+										img.location__img(src="img/location/location1.jpg", alt="")
+										.location__info Boats off the coast of Malta
+								.js__slide
+									.location__slider_item
+										img.location__img(src="img/location/location1.jpg", alt="")
+										.location__info Boats off the coast of Malta
+								.js__slide
+									.location__slider_item
+										img.location__img(src="img/location/location1.jpg", alt="")
+										.location__info Boats off the coast of Malta
+								.js__slide
+									.location__slider_item
+										img.location__img(src="img/location/location1.jpg", alt="")
+										.location__info Boats off the coast of Malta
+
+						.location__article
+							p.location__p Malta is a small island located 80km off of the Southern tip of Italy and boasts mild winters and hot summers, with an annual average temperature of 23°C. Formerly a British colony, Malta is now part of the Eurozone and is classified as an advanced economy by the IMF.
+
+							p.location__p Malta also ranks highly on the scale set out by the World Economic Forum, which takes into account factors such as employment, healthcare and education.
+							
+							p.location__p Malta is rewriting the rules on cryptocurrencies with their proposal for a new framework which will ensure that the market has legal regulations put in place enabling businesses in the sector to flourish responsibly. As a result of the new measures, a lot of key players on the market move their HQs to Malta.
+					// end location
+			// end Tab panes
+
+		// end .career

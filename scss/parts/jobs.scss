@@ -1,0 +1,36 @@
+/* Jobs
+ ----------------------------------------------------------------------------- */
+.jobs__collapse {
+	&_item {
+		background-color: $color_white;
+		border: 0.063em solid #e5e5e5;
+	}
+	&_link {
+	    padding: 1em 50px;
+		display: block;
+		color: #000;
+		font-size: 1.5em;
+		font-weight: 900;
+		border-bottom: 1px solid #e5e5e5;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&_body {
+		padding: 1.4em 50px;
+		background-color: #fcfcfc;
+	}
+	&_grid {
+		margin-top: 1.3em;
+	}
+	&_li {
+		&:before {
+			content: '';
+			width: 1em;
+			height: 1em;
+			margin-right: 0.5em;
+			background-color: #666;
+			border-radius: 50%;
+		}
+	}
+}

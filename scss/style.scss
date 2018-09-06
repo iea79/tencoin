@@ -7,6 +7,7 @@
  */
 
 @import 'mixins/mixin';
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 
@@ -21,11 +22,9 @@
 @import 'core/icon';
 @import 'core/global';
 @import 'core/template';
-@import 'parts/footer';
 @import 'core/form';
 @import 'core/grid';
 @import 'core/soc';
-@import 'parts/breadcrumb';
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
@@ -40,4 +39,8 @@
 @import 'parts/company';
 @import 'parts/slider';
 @import 'parts/getintouch';
-
+@import 'parts/footer';
+@import 'parts/breadcrumb';
+@import 'parts/career';
+@import 'parts/locations';
+@import 'parts/jobs';
