@@ -55,6 +55,12 @@
 	transition: all $trs_speed+s;
 }
 
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
+
 // Placeholder for input
 @mixin placeholder {
 	&::-webkit-input-placeholder {@content};

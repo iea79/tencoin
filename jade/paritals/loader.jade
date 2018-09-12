@@ -1,5 +1,21 @@
 // begin loader
-//- .loaderArea
-//- 	.loader
-//- 		span.icon-logo
+- if (home) {
+.loader.loader__home
+	.loader__area
+		.loader__item
+			.loader__logo
+				img(src="img/loader_logo.svg", alt="")
+		.loader__item
+			.loader__name
+				img(src="img/loader_name.svg", alt="")
+- } else {
+.loader
+	.loader__area
+		.loader__item
+			.loader__logo
+				img(src="img/loader_logo.svg", alt="")
+		.loader__item
+			.loader__name
+				img(src="img/loader_name.svg", alt="")
+- };
 // end loader 

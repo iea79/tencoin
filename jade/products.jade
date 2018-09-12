@@ -1,0 +1,53 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+
+block title
+	title Tencoin - Products
+
+block content
+
+	.container_center
+
+		// begin .breadcramb
+		.breadcrumb
+			li
+				a(href="#")
+					span.icon-house
+			li.breadcrumb__separator
+				span.icon-arrow
+			li
+				a(href="#") Products
+		// end .breadcramb
+
+
+		// begin .top
+		.top__wrap
+			.top
+				.top__bg.top__bg_products
+				.top__content
+					.top__title.typed
+						.typed__wrap Products
+		// end .top
+
+		// begin Products
+		.products__wrap
+			.products.grid.grid__4
+				.products__item
+					a.products__link(href="#")
+						img.products__img(src="img/products/product1.jpg", alt="")
+						.slider__home_title P2P exchange platform
+				.products__item
+					a.products__link(href="#")
+						img.products__img(src="img/products/product2.jpg", alt="")
+						.slider__home_title Announcement Q1 2019
+				.products__item
+					a.products__link(href="#")
+						img.products__img(src="img/products/product3.jpg", alt="")
+						.slider__home_title Announcement Q3 2019
+				.products__item
+					a.products__link(href="#")
+						img.products__img(src="img/products/product1.jpg", alt="")
+						.slider__home_title P2P exchange platform
+		// end Products

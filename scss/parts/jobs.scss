@@ -1,36 +1,137 @@
 /* Jobs
  ----------------------------------------------------------------------------- */
 .jobs__collapse {
+	&_wrap {
+		margin-bottom: 4em;
+		@media (max-width : 767px) {
+			margin-bottom: 3em;
+		}
+	}
 	&_item {
+		margin-bottom: 1em;
 		background-color: $color_white;
-		border: 0.063em solid #e5e5e5;
 	}
 	&_link {
-	    padding: 1em 50px;
+		position: relative;
+	    padding: 1em 4em 1em 50px;
 		display: block;
 		color: #000;
 		font-size: 1.5em;
 		font-weight: 900;
-		border-bottom: 1px solid #e5e5e5;
+		border: 0.063em solid #e5e5e5;
 		&:hover {
 			text-decoration: none;
 		}
+		@media (max-width : 1199px) {
+			padding: 1em 20px;
+		}
+		@media (max-width : 767px) {
+			font-size: 1.1em;
+			padding-right: 3em;
+		}
+		&.active {
+			.jobs__collapse_icon {
+				top: 1.2em;
+				&:before {
+					content: $icon-minus;
+				}
+			}
+		}
+	}
+	&_content {
+		height: 0;
+		overflow: hidden;
+		transition: all 0.3s;
+		.jobs__collapse_body {
+		}
+		&.open {
+			height: auto;
+			.jobs__collapse_body {
+				padding: 1.4em 50px;
+				@media (max-width : 1199px) {
+					padding: 1.4em 20px;
+				}
+			}
+		}
 	}
 	&_body {
-		padding: 1.4em 50px;
+		padding: 0 50px;
 		background-color: #fcfcfc;
+		border-left: 0.063em solid #e5e5e5;
+		border-right: 0.063em solid #e5e5e5;
+		transition: 0.3s;
+		@media (max-width : 1199px) {
+			padding: 0 20px;
+		}
 	}
 	&_grid {
 		margin-top: 1.3em;
+		@media (max-width : 991px) {
+			.grid__item {
+				width: 100%;
+			}
+		}
+		@media (max-width : 767px) {
+			.grid__item {
+				margin-bottom: 1em;
+			}
+		}
 	}
 	&_li {
+		margin-bottom: 0.24em;
+		line-height: 1.3;
 		&:before {
 			content: '';
-			width: 1em;
-			height: 1em;
+			position: relative;
+			top: -0.17em;
+			width: 0.2em;
+			height: 0.2em;
+			display: inline-block;
 			margin-right: 0.5em;
 			background-color: #666;
 			border-radius: 50%;
 		}
+	}
+	&_btn {
+		padding: 1.7em;
+		display: block;
+		cursor: pointer;
+		color: $color_white; 
+		text-transform: uppercase;
+		text-align: center;
+		background-color: $color_primary;
+		border: 0;
+		&:hover {
+			opacity: 0.9;
+		}
+		@media (max-width : 1199px) {
+			padding: 1.4em;
+		}
+		@media (max-width : 767px) {
+			padding: 1em;
+		}
+	}
+	&_icon {
+		position: absolute;
+		top: 1.15em;
+		right: 2em;
+		font-size: 1em;
+		font-family: '#{$icomoon-font-family}';
+		color: $color_primary;
+		transition: 0.3s;
+		&:before {
+			content: $icon-plus; 
+		}
+		@media (max-width : 1199px) {
+			right: 1em;
+		}
+	}
+}
+
+.icon-plus,
+.icon-minus {
+	display: none;
+	&.show {
+		display: inline-block;
 	}
 }

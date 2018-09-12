@@ -1,0 +1,102 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+
+block title
+	title Tencoin - Career
+
+block content
+
+	.container_center
+
+		// begin .breadcramb
+		.breadcrumb
+			li
+				a(href="#")
+					span.icon-house
+			li.breadcrumb__separator
+				span.icon-arrow
+			li
+				a(href="#") Career
+		// end .breadcramb
+
+
+		// begin .top
+		.top__wrap
+			.top
+				.top__bg.top__bg_career
+				.top__content
+					.top__title.typed
+						.typed__wrap Сareer
+		// end .top
+
+
+		// begin .career
+		.career
+
+			// begin Nav tabs
+			ul.career__tabs
+				li.career__item
+					a.career__link(href="career.html") Our principles
+				li.career__item
+					a.career__link(href="career__locations.html") Locations
+				li.career__item
+					a.career__link(href="career__jobs.html") Jobs
+				li.career__item
+					a.career__link.active(href="#") Hiring process
+			// end Nav tabs
+
+			// begin Tab panes
+			.career__content
+				.career__pane
+
+					// begin Hiring process
+					.page__left
+						h2.typed
+							.typed__wrap Selection process
+						p We believe that the key to success is being yoyrself as it is what makes you unique. Of course, we also value professionalism and sincerity from your side.
+					.page__right
+						h3.mb_3 The selections process consists jf several steps
+						ul.hiring
+							li.hiring__item
+								.hiring__left
+									.hiring__circle(data-percent="20")
+										.hiring__count 1
+									//- img(src="img/hiring/hiring1.jpg", alt="")
+								.hiring__right
+									p Apply for the job through our website by sending your CV and cover letter
+							li.hiring__item
+								.hiring__left
+									.hiring__circle(data-percent="40")
+										.hiring__count 2
+									//- img(src="img/hiring/hiring2.jpg", alt="")
+								.hiring__right
+									p We will invite successful candidate for the initial interview with our HR manager
+							li.hiring__item
+								.hiring__left
+									.hiring__circle(data-percent="60")
+										.hiring__count 3
+									//- img(src="img/hiring/hiring3.jpg", alt="")
+								.hiring__right
+									p If your initial interview is successful, we will invite you for the second interview with your line manager
+							li.hiring__item
+								.hiring__left
+									.hiring__circle(data-percent="80")
+
+										.hiring__count 4
+									//- img(src="img/hiring/hiring4.jpg", alt="")
+								.hiring__right
+									p For some vacancies we may also ask you to complete a certain assignment as part of the selection process
+							li.hiring__item
+								.hiring__left
+									.hiring__circle(data-percent="99.99")
+										.hiring__count 5
+									//- img(src="img/hiring/hiring5.jpg", alt="")
+								.hiring__right
+									p Selected candidates will receive our job offer and join the team in Malta
+					// end Hiring process
+					
+			// end Tab panes
+
+		// end .career

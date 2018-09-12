@@ -25,6 +25,8 @@
 @import 'core/form';
 @import 'core/grid';
 @import 'core/soc';
+@import 'core/page';
+@import 'core/breadcrumb';
 @import 'core/pagination';
 @import 'core/buttons';
 @import 'core/video';
@@ -40,7 +42,43 @@
 @import 'parts/slider';
 @import 'parts/getintouch';
 @import 'parts/footer';
-@import 'parts/breadcrumb';
 @import 'parts/career';
 @import 'parts/locations';
 @import 'parts/jobs';
+@import 'parts/hiring';
+@import 'parts/about';
+@import 'parts/products';
+@import 'parts/article';
+@import 'parts/loader';
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.typed{
+	&_duble {
+		&:before,&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: bottom;
+			
+		}
+		&:before {
+			content: "< "
+		}
+		&:after {
+			content: " >"
+		}
+	}
+	&__wrap {
+		display: inline;
+	}
+}

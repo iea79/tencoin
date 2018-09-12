@@ -1,7 +1,8 @@
 .form {
 	@extend %clear_a;
 	&__row {
-		margin-bottom: 15px;
+		position: relative;
+		margin-bottom: 2.4em;
 		@extend %clear_a;
 		input:not([type]),
 		input[type=text],
@@ -15,6 +16,12 @@
 		textarea,
 		.btn {
 			width: 100%;
+			&:focus, &.fullField {
+				& + .form__label {
+					top: -1.2em;
+					font-weight: bold;
+				}
+			}
 		}
 		textarea {
 			max-width: 100%;
@@ -23,7 +30,11 @@
 		}
 	}
 	&__label {
-		
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $input_placeholder_color;
+		transition: .3s;
 	}
 }
 // Input text and textarea ================================================
@@ -39,7 +50,7 @@ input[type=datetime],
 textarea {
 	background-color: $color_primary;
 	border-bottom: 1px solid $color_white;
-	padding-bottom: 0.55em;
+	padding: 0 0 0.55em;
 	outline: none;
 	color: $color_white;
 	font-size: 1em;
@@ -57,8 +68,8 @@ textarea {
 		background-color: $color_primary;
 	}
 	&.invalid {
-		background-color: #fff0f0;
-		border: 1px solid red;
+		// background-color: #fff0f0;
+		border-bottom: 1px solid red;
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {

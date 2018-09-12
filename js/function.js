@@ -57,35 +57,19 @@ $(document).ready(function() {
 		event.preventDefault();
 	});
 
-	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false;
-	// });
-
-	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    // $(document).ready(function(){
-    //     var HeaderTop = $('#header').offset().top;
-        
-    //     $(window).scroll(function(){
-    //             if( $(window).scrollTop() > HeaderTop ) {
-    //                     $('#header').addClass('stiky');
-    //             } else {
-    //                     $('#header').removeClass('stiky');
-    //             }
-    //     });
-    // });
-
-    // Inputmask.js
-    // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
-    // formSubmit();
-    
-   	// gridMatch();
-
     checkOnResize();
+
+    // Menu in Header
+    $('.js-navbar a').on('click', function() {
+        $this = $(this);
+
+        if( !$this.hasClass('active') ) {
+            $('.js-navbar a').removeClass('active');
+        }
+
+        $this.toggleClass('active');
+    });
+
 
 
     // Language dropdown in Header
@@ -118,14 +102,6 @@ $(document).ready(function() {
         e.preventDefault();
         var $this = $(this),
             navbar = $('.js-navbar');
-            // navH = $('.js-navbar').innerHeight();
-
-
-
-        // if(!$this.hasClass('open')) {
-        //     $('.js-navbar').slideUp(1000);
-        //     $('.js__navbar-toggle').removeClass('open');
-        // }
 
         $this.toggleClass('open');
         navbar.toggleClass('open');
@@ -140,7 +116,7 @@ $(document).ready(function() {
         slidesToScroll: 1,
         responsive: [
         {
-            breakpoint: 767,
+            breakpoint: 768,
             settings: {
                 slidesToShow: 1
             }
@@ -164,28 +140,21 @@ $(document).ready(function() {
 
      // Location slider - Career page / Tab Location
      $('.js__location__slider').slick({
-        arrows: false,
         dots: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
+        prevArrow: $('.js-location__prev'),
+        nextArrow: $('.js-location__next'),
         responsive: [
         {
-            breakpoint: 767,
+            breakpoint: 768,
             settings: {
                 dots: false
             }
         }
         ]
      });
-     $('.js-location__prev').on('click', function() {
-        $('.js__location__slider').slick('slickPrev');
-     });
-
-     $('.js-location__next').on('click', function() {
-        $('.js__location__slider').slick('slickNext');
-     });
-
 
      // Jobs Collapse
     $('.js_jobs__collapse').on('click', function(e) {
@@ -194,17 +163,43 @@ $(document).ready(function() {
             jobId = $this.attr('href');
 
         if( !$this.hasClass('active') ) {
-            $('.js_jobs__content').slideUp();
+            $('.js_jobs__content').removeClass('open');
             $('.js_jobs__collapse').removeClass('active');
         }
 
+
         $this.toggleClass('active');
-        $(jobId).slideToggle(200);
+        $(jobId).toggleClass('open');
     });
 
+    $('input, textarea').on('blur', function() {
+        
+        if($(this).val()!=='') {
+            $(this).addClass('fullField').removeClass('emptyField');
+        } else {
+            $(this).addClass('emptyField').removeClass('fullField');
+        }
+    });
 
-
+    
 });
+
+function circleAnim(el) {
+    $(el).each(function(i) {
+        var percent = $(this).data('percent')
+        $(this).circliful({
+            animationStep: 5,
+            foregroundBorderWidth: 5,
+            backgroundBorderWidth: 2,
+            // fillColor: '#f2f2f2' ,
+            foregroundColor: '#0366e9',
+            backgroundColor: '#f2f2f2',
+            fontColor: '#fff',
+            pointSize: 0,
+            percent: percent
+       });
+    });
+}
 
 $(window).resize(function(event) {
     var windowWidth = $(window).width();
@@ -217,7 +212,6 @@ $(window).resize(function(event) {
 });
 
 function checkOnResize() {
-   	// gridMatch();
     fontResize();
 }
 
@@ -235,6 +229,63 @@ function fontResize() {
     	var fontSize = 100;
     }
 	$('body').css('fontSize', fontSize + '%');
+}
+
+// Печать текста 
+// Добавить typed__wrap к обертке текста
+function animatedText() {
+    $('.typed__wrap').each(function(i, el) {
+        $(el).addClass('typed__'+i);
+        $('.typed__'+i).viewportChecker({
+            callbackFunction: function(elem){
+                animatedTextStart('.typed__'+i);
+            }
+        })
+    });
+};
+
+function animatedTextStart(elem) {
+    var elClass = elem;
+    var str = $(elClass).text();
+    $(elClass).empty();
+    var typed = new Typed(elClass, {
+            strings: [str],
+            typeSpeed: 60,
+            showCursor: true,
+            startDelay: 600,
+            onStringTyped: function() {
+                $('.typed-cursor').hide();
+            },
+    });
+};
+
+$(window).on('load', function() {
+    loader();
+});
+
+function loader() {
+    var loader = $('.loader');
+
+
+    if (loader.hasClass('loader__home')) {
+        setTimeout(function() {
+            $('.loader__name').addClass('loader__name_show');
+        }, 500);
+        setTimeout(function() {
+            loaderHide();
+        }, 1300);
+    } else {
+        loaderHide();
+    }
+
+    function loaderHide() {
+        loader.addClass('loader__hide');
+        setTimeout(function() {
+            loader.remove();
+            animatedText();
+            circleAnim('.hiring__circle');
+        }, 300);
+    }
 }
 
 // Видео youtube для страницы

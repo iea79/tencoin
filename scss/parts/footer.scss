@@ -30,7 +30,7 @@
 	}
 	&__copyright {
 		float: left;
-		@media (max-width: 480px) {
+		@media (max-width: 767px) {
 			float: none;
 			margin-bottom: 1em;
 		}
@@ -38,13 +38,13 @@
 	&__rules {
 		float: right;
 		@extend %clear_a;
-		@media (max-width: 480px) {
+		@media (max-width: 767px) {
 			float: none;
 		}
 		&_item {
 			float: left;
 			margin-left: 3em;
-			@media (max-width: 480px) {
+			@media (max-width: 767px) {
 				margin-left: 0;
 				margin-right: 3em;
 			}

@@ -4,11 +4,15 @@
  	padding-bottom: 5em;
  	@media (max-width : 767px) {
  		padding-bottom: 2em;
+ 		&.career__justify {
+ 			margin-left: -15px;
+ 			margin-right: -15px;
+ 		}
  	}
  	&__tabs {
  		width: 100%;
  		margin-top: 3.35em;
- 		margin-bottom: 2.7em;
+ 		margin-bottom: 3.15em;
  		border: 0;
  		@extend %clear_a;
  		overflow: hidden;
@@ -18,6 +22,9 @@
  			margin-right: -15px;
  			margin-top: 0;
  		}
+ 	}
+ 	&__content {
+
  	}
  	&__item {
  		float: left;
@@ -43,42 +50,12 @@
 			color: $color_white;
  			background-color: $color_primary;
  		}
-		@media (max-width : 1024px) {
-			padding: 15px 20px;
-		}
-		@media (max-width : 767px) {
-			padding: 10px 20px;
-			// font-size: 0.8em;
-		}
- 	}
- }
-
- .page {
- 	@extend %clear_a;
- 	&__left {
- 		width: 25%;
- 		float: left;
- 		@media (max-width : 1024px) {
- 			width: 100%;
- 			float: none;
+ 		@media (max-width : 1199px) {
+ 			padding: 1.5em 1em;
  		}
- 	}
- 	&__right {
- 		overflow: hidden;
- 	}
- 	&__h2 {
- 		position: relative;
-	    top: -0.2em;
-	    margin: 0.3em 0 0;
- 	}
- 	&__h3 {
- 		position: relative;
-		margin-bottom: 0.4em;
- 	}
- 	&__p {
- 		// margin-bottom: 1.3em;
- 		padding-right: 17%;
- 		line-height: 1.4;
+		@media (max-width : 767px) {
+			padding: 1em;
+		}
  	}
  }
 
@@ -86,6 +63,9 @@
  	margin-left: -2em;
  	margin-bottom: 3.2em;
  	@extend %clear_a;
+ 	@media (max-width : 1024px) {
+ 		margin-bottom: 2em;
+ 	}
  	&__item {
 		width: 33.333%;
 		float: left;
@@ -93,6 +73,7 @@
 		@media (max-width : 1024px) {
 			width: 100%;
 			float: none;
+			margin-bottom: 1.5em;
 		}
  	}
  	&__number {
@@ -101,13 +82,12 @@
 		font-size: 2.9em;
 		font-weight: 400;
 		opacity: 0.1;
+		& + p {
+			margin: 0;
+		}
  	}
- 	&__p {
- 		margin: 0;
- 		line-height: 1.33em;
- 		&_bold {
- 			color: $color_primary;
-			font-weight: 500;
- 		}
+ 	&__bold {
+		color: $color_primary;
+		font-weight: 500;
  	}
  }

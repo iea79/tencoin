@@ -1,0 +1,20 @@
+/* Page
+-------------------------------------------------------------------------------*/
+ .page {
+ 	@extend %clear_a;
+ 	&__left {
+ 		position: relative;
+ 		width: 25%;
+ 		float: left;
+ 		padding-right: 7%;
+ 		@media (max-width : 1199px) {
+ 			width: 100%;
+ 			float: none;
+ 			padding-right: 0;
+ 			margin-bottom: 1em;
+ 		}
+ 	}
+ 	&__right {
+ 		overflow: hidden;
+ 	}
+ }

@@ -1,28 +1,29 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "../fonts" !default;
 
-$icon-minus: "\e90d";
-$icon-logo: "\e900";
-$icon-arrow: "\e901";
-$icon-calendar: "\e902";
-$icon-dropdown: "\e903";
-$icon-eye: "\e904";
-$icon-facebook: "\e905";
-$icon-house: "\e906";
-$icon-instagram: "\e907";
+$icon-arrow: "\e900";
+$icon-calendar: "\e901";
+$icon-dropdown: "\e902";
+$icon-eye: "\e903";
+$icon-facebook: "\e904";
+$icon-house: "\e905";
+$icon-instagram: "\e906";
+$icon-logo: "\e907";
 $icon-m: "\e908";
-$icon-plus: "\e909";
-$icon-slide_next: "\e90a";
-$icon-slide_prev: "\e90b";
-$icon-twitter: "\e90c";
+$icon-minus: "\e909";
+$icon-plus: "\e90a";
+$icon-quote: "\e90b";
+$icon-slide_next: "\e90c";
+$icon-slide_prev: "\e90d";
+$icon-twitter: "\e90e";
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kq35et');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?kq35et#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?kq35et') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?kq35et') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?kq35et##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?11mwfx');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?11mwfx#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?11mwfx') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?11mwfx') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?11mwfx##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -42,16 +43,6 @@ $icon-twitter: "\e90c";
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-minus {
-  &:before {
-    content: $icon-minus; 
-  }
-}
-.icon-logo {
-  &:before {
-    content: $icon-logo; 
-  }
-}
 .icon-arrow {
   &:before {
     content: $icon-arrow; 
@@ -87,14 +78,29 @@ $icon-twitter: "\e90c";
     content: $icon-instagram; 
   }
 }
+.icon-logo {
+  &:before {
+    content: $icon-logo; 
+  }
+}
 .icon-m {
   &:before {
     content: $icon-m; 
   }
 }
+.icon-minus {
+  &:before {
+    content: $icon-minus; 
+  }
+}
 .icon-plus {
   &:before {
     content: $icon-plus; 
+  }
+}
+.icon-quote {
+  &:before {
+    content: $icon-quote; 
   }
 }
 .icon-slide_next {
@@ -128,7 +134,6 @@ $icon-twitter: "\e90c";
 .icon-arrow {
   color: #BCBCBC;
 }
-.icon-minus,
-.icon-plus {
+.icon-quote {
   color: $color_primary;
 }
