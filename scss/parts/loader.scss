@@ -27,35 +27,36 @@
 		vertical-align: middle;
 	}
 	&__logo {
+		max-width: 80px;
 		@media (min-width: 768px) {
-			max-width: 166px;
+			// max-width: 166px;
 		}
 		@media (max-width: 767px) {
-		    max-width: 80px;
+		    // max-width: 80px;
 		}
 		animation: 12s linear 0s normal none infinite running rot;
-	}
-	$name: 510px;
-	$pad: 44px;
-	@media (max-width: 767px) {
-		$name: 210px;
-		$pad: 24px;
 	}
 	&__name {
 		max-width: 0;
 		display: block;
 		overflow: hidden;
 		padding-left: 0;
-		transition: 0.5s;
+		transition: 1s;
 		img {
-			width: $name - $pad;
+			// width: 210px - 24px;
+			width: 255px - 24px;
 			display: block;
 			max-width: none;
-			
+			@media (min-width: 768px) {    
+				// width: 510px - 44px;
+			}
 		}
 		&_show {
-			padding-left: $pad;
-			max-width: $name;
+			padding-left: 24px;
+			max-width: 210px;
+			@media (min-width: 768px) {    
+				max-width: 510px;
+			}
 		}
 	}
 }

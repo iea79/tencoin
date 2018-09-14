@@ -1,0 +1,27 @@
+.product {
+	width: 100%;
+	padding-top: 0.6em;
+	margin-bottom: 2.8em;
+	&:after {
+		content: '';
+		clear: both;
+		display: block;
+	}
+	&__info {
+		margin-top: 0.8em;
+		margin-bottom: 3em;
+	}
+	.product__description {
+		width: 50%;
+		float: left;
+		padding-right: 2.5%;
+	}
+	&__img {
+		width: 100%;
+		height: auto;
+		display: block;
+		&_wrap {
+			overflow: hidden;
+		}
+	}
+}

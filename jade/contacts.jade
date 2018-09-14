@@ -28,7 +28,7 @@ block content
 				.top__bg.top__bg_contacts
 				.top__content
 					.top__title.typed
-						.typed__wrap Contacts
+						.typed__wrap(data-typed="Contacts") 
 		// end .top
 
 
@@ -36,8 +36,8 @@ block content
 		.getintouch__wrap.out
 			.getintouch
 				.getintouch__left
-					h2.getintouch__left_title.typed
-						.typed__wrap Get in touch
+					h2.getintouch__left_title.typed.block__title
+						.typed__wrap(data-typed="Get in touch") 
 					.getintouch__left_contacts
 						.getintouch__left_row
 							.getintouch__left_row_par Phone:
@@ -67,24 +67,23 @@ block content
 									li.follow__soc_item
 										a.follow__soc_link(href="#")
 											span.icon-instagram.getintouch__soc_icon
-				form.getintouch__right(action="#")
-					.getintouch__right_column_list
-						.getintouch__right_column
-							.form__row
-								input.getintouch__right_input(type="text", id="f1")
-								label.form__label(for="f1") Name
-							.form__row
-								input.getintouch__right_input(type="tel", id="f2")
-								label.form__label(for="f2") Phone
-							.form__row
-								textarea.getintouch__right_textarea(id="f3")
-								label.form__label(for="f3") Your message
-						.getintouch__right_column
-							.form__row
-								input.getintouch__right_input(type="text", id="f4")
-								label.form__label(for="f4") Surname
-							.form__row
-								input.getintouch__right_input(type="email", id="f5")
-								label.form__label(for="f5") E-mail
-							button.getintouch__right_btn.btn Send
+				.getintouch__form
+					.getintouch__form_list.grid.grid__2
+						.form__row.getintouch__form_row
+							input.getintouch__form_input(type="text", id="f1")
+							label.form__label(for="f1") Name
+						.form__row.getintouch__form_row
+							input.getintouch__form_input(type="text", id="f4")
+							label.form__label(for="f4") Surname
+						.form__row.getintouch__form_row
+							input.getintouch__form_input(type="tel", id="f2")
+							label.form__label(for="f2") Phone
+						.form__row.getintouch__form_row
+							input.getintouch__form_input(type="email", id="f5")
+							label.form__label(for="f5") E-mail
+						.form__row.getintouch__form_row
+							textarea.getintouch__form_textarea(id="f3")
+							label.form__label(for="f3") Your message
+						.form__row.getintouch__form_row
+							button.getintouch__form_btn.btn Send
 		// end .getintouch

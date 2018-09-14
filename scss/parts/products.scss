@@ -1,18 +1,38 @@
 /* Products
 -------------------------------------------------------------------------------*/
 .products {
+	margin-left: -1.5em;
+	margin-bottom: 1.4em;
 	&__wrap {
 		padding-top: 3.15em;
 		padding-bottom: 4.6em;
 	}
 	&__item {
+		padding-left: 1.5em;
 		margin-bottom: 1.5em;
 	}
 	&__link {
 		width: 100%;
+		display: block;
+		text-decoration: none;
 	}
 	&__img {
 		display: block;
 		margin-bottom: 0.7em;
+		overflow: hidden;
+		img {
+			transition: 1s;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+	&__title {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }

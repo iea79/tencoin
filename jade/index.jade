@@ -23,7 +23,7 @@ block content
 					.top__h Developing the future
 					.top__sub Software solution for 
 						a.top__sub_link.typed.typed_duble(href="#")
-							span.typed__text1.typed__wrap fintech
+							span.typed__wrap(data-typed="fintech")
 		// end .top
 
 
@@ -49,11 +49,11 @@ block content
 		// begin .company
 		.company
 			.company__left
-				h2.typed
-					span.typed__wrap.typed__text2 Сompany
-				p Tencoins is an international IT company that specializes in Internet-related services and products, which include trading, payment and gambling platforms.
+				h2.typed.block__title
+					span.typed__wrap(data-typed="Сompany") 
+				p.sub Tencoins is an international IT company that specializes in Internet-related services and products, which include trading, payment and gambling platforms.
 
-				h3 Our solution maybe interested for
+				h5 Our solution can be interested for
 
 				ul.company__interest
 					li.company__interest_item
@@ -75,7 +75,7 @@ block content
 			.company__right
 				.company__right_title Our key area of expertise is
 				a.company__right_link.typed.typed_duble(href="#")
-					span.typed__wrap developing software solutions
+					span.typed__wrap(data-typed="developing software solutions ") 
 				.company__right_texttext for the new e-economy, including cryptocurrency market
 				.company__right_down
 		// end .company
@@ -85,9 +85,9 @@ block content
 	.slider__bg
 		.slider
 			.slider__left
-				h2.slider__h2.typed
-					span.typed__wrap.typed__text3 Products
-				p See our current products
+				h2.slider__title.typed.block__title
+					span.typed__wrap(data-typed="Products") 
+				p.sub See our current products
 				.slider__arrows
 					a.slider__arrow.js-slider__prev(href="#")
 						span.icon-slide_prev
@@ -135,9 +135,9 @@ block content
 		// begin .slider
 		.slider.slider__news
 			.slider__left
-				h2.slider__h2.typed
-					span.typed__wrap.typed__text4 News
-				p Read our last news
+				h2.slider__title.typed.block__title
+					span.typed__wrap(data-typed="News") 
+				p.sub Read our last news
 				.slider__arrows
 					a.slider__arrow.js-slider__news_prev(href="#")
 						span.icon-slide_prev
@@ -244,8 +244,8 @@ block content
 	.getintouch__wrap
 		.getintouch
 			.getintouch__left
-				h2.getintouch__left_title.typed
-					.typed__wrap Get in touch
+				h2.getintouch__left_title.typed.block__title
+					.typed__wrap(data-typed="Get in touch") 
 				.getintouch__left_contacts
 					.getintouch__left_row
 						.getintouch__left_row_par Phone:
@@ -275,24 +275,23 @@ block content
 								li.follow__soc_item
 									a.follow__soc_link(href="#")
 										span.icon-instagram.getintouch__soc_icon
-			form.getintouch__right(action="#")
-				.getintouch__right_column_list
-					.getintouch__right_column
-						.form__row
-							input.getintouch__right_input(type="text", id="f1")
-							label.form__label(for="f1") Name
-						.form__row
-							input.getintouch__right_input(type="tel", id="f2")
-							label.form__label(for="f2") Phone
-						.form__row
-							textarea.getintouch__right_textarea(id="f3")
-							label.form__label(for="f3") Your message
-					.getintouch__right_column
-						.form__row
-							input.getintouch__right_input(type="text", id="f4")
-							label.form__label(for="f4") Surname
-						.form__row
-							input.getintouch__right_input(type="email", id="f5")
-							label.form__label(for="f5") E-mail
-						button.getintouch__right_btn.btn Send
+			.getintouch__form
+				.getintouch__form_list.grid.grid__2
+					.form__row.getintouch__form_row
+						input.getintouch__form_input(type="text", id="f1")
+						label.form__label(for="f1") Name
+					.form__row.getintouch__form_row
+						input.getintouch__form_input(type="text", id="f4")
+						label.form__label(for="f4") Surname
+					.form__row.getintouch__form_row
+						input.getintouch__form_input(type="tel", id="f2")
+						label.form__label(for="f2") Phone
+					.form__row.getintouch__form_row
+						input.getintouch__form_input(type="email", id="f5")
+						label.form__label(for="f5") E-mail
+					.form__row.getintouch__form_row
+						textarea.getintouch__form_textarea(id="f3")
+						label.form__label(for="f3") Your message
+					.form__row.getintouch__form_row
+						button.getintouch__form_btn.btn Send
 	// end .getintouch

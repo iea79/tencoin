@@ -68,9 +68,9 @@
 		}
 		&_money {
 			background: url('../img/top/top_img7.jpg') no-repeat center top;
-			@media (max-width: 767px) {
-				// background-position: right top;
-			}
+		}
+		&_product {
+			background: url('../img/top/top_img8.jpg') no-repeat center top;
 		}
 		&:before {
 			content: '';

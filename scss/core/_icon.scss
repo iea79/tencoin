@@ -11,19 +11,20 @@ $icon-instagram: "\e906";
 $icon-logo: "\e907";
 $icon-m: "\e908";
 $icon-minus: "\e909";
-$icon-plus: "\e90a";
-$icon-quote: "\e90b";
-$icon-slide_next: "\e90c";
-$icon-slide_prev: "\e90d";
-$icon-twitter: "\e90e";
+$icon-play: "\e90a";
+$icon-plus: "\e90b";
+$icon-quote: "\e90c";
+$icon-slide_next: "\e90d";
+$icon-slide_prev: "\e90e";
+$icon-twitter: "\e90f";
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?11mwfx');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?11mwfx#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?11mwfx') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?11mwfx') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?11mwfx##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?p0bzlo');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?p0bzlo#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?p0bzlo') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?p0bzlo') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?p0bzlo##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -93,6 +94,11 @@ $icon-twitter: "\e90e";
     content: $icon-minus; 
   }
 }
+.icon-play {
+  &:before {
+    content: $icon-play; 
+  }
+}
 .icon-plus {
   &:before {
     content: $icon-plus; 
@@ -134,6 +140,7 @@ $icon-twitter: "\e90e";
 .icon-arrow {
   color: #BCBCBC;
 }
-.icon-quote {
+.icon-quote,
+.icon-play {
   color: $color_primary;
 }

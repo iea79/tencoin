@@ -7,6 +7,14 @@
 			margin-bottom: 3em;
 		}
 	}
+	&_title {
+		color: #000;
+		font-size: 2em;
+		font-weight: 300;
+		text-transform: capitalize;
+		margin-top: 0.6em;
+		margin-bottom: 1.5em;
+	}
 	&_item {
 		margin-bottom: 1em;
 		background-color: $color_white;

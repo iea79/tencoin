@@ -39,7 +39,7 @@
 	&__right {
 		overflow: hidden;
 	}
-	&__h2 {
+	&__title {
 		margin-bottom: 0.45em;
 	}
 	&__arrows {
@@ -103,8 +103,7 @@
 			&:hover {
 				// opacity: 0.8;
 				img {
-					transform: scale(1.1);
-					
+					transform: scale(1.1);					
 				}
 			}
 		}

@@ -2,7 +2,8 @@
 	@extend %clear_a;
 	&__row {
 		position: relative;
-		margin-bottom: 2.4em;
+		// float: left;
+		margin-bottom: 3.5em !important;
 		@extend %clear_a;
 		input:not([type]),
 		input[type=text],
@@ -18,7 +19,7 @@
 			width: 100%;
 			&:focus, &.fullField {
 				& + .form__label {
-					top: -1.2em;
+					top: -1.4em;
 					font-weight: bold;
 				}
 			}
@@ -32,9 +33,12 @@
 	&__label {
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 3.2em;
 		color: $input_placeholder_color;
 		transition: .3s;
+		@media (max-width : 767px) {
+			left: 0;
+		}
 	}
 }
 // Input text and textarea ================================================

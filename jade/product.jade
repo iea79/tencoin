@@ -1,0 +1,90 @@
+extends template.jade
+
+block variables
+	-var pageClass = "";
+
+block title
+	title Tencoin - History of money
+
+block content
+
+	.container_center
+
+		// begin .breadcramb
+		.breadcrumb
+			li
+				a(href="#")
+					span.icon-house
+			li.breadcrumb__separator
+				span.icon-arrow
+			li
+				a(href="#") News
+			li.breadcrumb__separator
+				span.icon-arrow
+			li
+				a(href="#") History of money
+		// end .breadcramb
+
+
+		// begin .top
+		.top__wrap
+			.top
+				.top__bg.top__bg_product
+				.top__content
+					.top__title.typed
+						.typed__wrap(data-typed="P2P exchange platform") 
+		// end .top
+
+
+		.slider__news_info.product__info
+			span.slider__news_info_date
+				span.icon-calendar
+				|12.04.18
+			span.slider__news_info_eye
+				span.icon-eye
+				|15
+
+
+		.page__product
+
+			// begin Article
+			.page__left
+				h2.typed.block__title
+					.typed__wrap(data-typed="We start") 
+				.blockquote
+					span.blockquote__icon
+					|Imagine a financial platform that you will enjoy using. An on-line community that brings together professional and amateur traders.
+			.page__right
+				.product
+					.product__description
+						h3.line Tencoins is launching a different trading platform.
+
+						h5 Safe
+
+						p The platform developed by Tencoins will be a safe online market space where people will be able to conclude deals that are one hundred per cent secure. All our users will be verified to guarantee your safety.
+
+						h5 Convenient
+
+						p The platform design will ensure the outmost user convenience and enjoyable user experience through a clearcut interface.
+
+						h5 Simple
+
+						p The platform targets both professional traders and newcomers to the market. Its aim is to make deals simple, understandable and enjoyable.
+
+						h3.next.line Trading has never been so easy.
+					.product__img_wrap
+						img.product__img(src="img/iPhone7_1_upd.jpg", alt="iPhone7_1")
+
+			
+				.video__wrapper.js_youtube(id="ID_VIDEO")
+					<iframe width="100%" height="39.38em" src="https://www.youtube-nocookie.com/embed/3DXfEl0ADBE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+				.article__share
+					span.article__share_p Share
+					a.article__link(href="#") repost
+						span.article__link_icon
+							.icon-facebook
+					a.article__link(href="#") twit
+						span.article__link_icon
+							.icon-twitter
+			// end Article

@@ -103,8 +103,20 @@ $(document).ready(function() {
         var $this = $(this),
             navbar = $('.js-navbar');
 
+        if (!$(this).hasClass('open')) {
+            $('body').css('overflow', 'hidden').append('<div class="navbar__overlay"></div>');
+        } else {
+            $('body').removeAttr('style');
+            $('.navbar__overlay').remove();
+        }
+
         $this.toggleClass('open');
         navbar.toggleClass('open');
+    });
+    $('body').on('click', '.navbar__overlay', function() {
+        $('.js__navbar-toggle, .js-navbar').removeClass('open');
+        $('body').removeAttr('style');
+        $('.navbar__overlay').remove();
     });
 
 
@@ -246,7 +258,7 @@ function animatedText() {
 
 function animatedTextStart(elem) {
     var elClass = elem;
-    var str = $(elClass).text();
+    var str = $(elClass).data('typed');
     $(elClass).empty();
     var typed = new Typed(elClass, {
             strings: [str],
@@ -296,7 +308,7 @@ $(function () {
             $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-            $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
+            $(this).append($('<div class="video__play"><span class="icon-play video__play_icon"></span></div>'));
 
         });
 

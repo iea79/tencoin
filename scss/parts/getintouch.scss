@@ -18,7 +18,7 @@
 	&__left {
 		width: 50%;
 		padding-left: 7em;
-		padding-top: 4.8em;
+		padding-top: 5.4em;
 		display: table-cell;
 		vertical-align: top;
 		@media (max-width : 1366px) {
@@ -86,37 +86,34 @@
 			font-size: 1.7em;
 		}
 	}
-	&__right {
-		padding: 6.1em 7em 4.9em 0;
-		width: 50%;
+	&__form {
+		padding: 5.5em 6.5em 5.2em;
 		display: table-cell;
 		vertical-align: top;
 		background-color: $color_primary;
 		@extend %clear_a;
 		@media (max-width: 1199px) {
-			padding: 6.1em 7em 4.9em 3em;
+			padding: 5.5em 20px 5.2em;
 			width: 100%;
 			display: block;
 		}
 		@media (max-width: 1024px) {
 			padding: 4em 15px 2em;
 		}
-		&_column {
-			float: left;
-			width: 50%;
-			padding-left: 3.2em;
-			&_list {
-				@media (max-width : 1024px) {
-					margin-left: -3.2em;
-				}
-				@media (max-width : 767px) {
-					margin-left: 0;
-				}
+		&_list  {
+			margin-left: -3.2em !important;
+			@media (max-width : 767px) {
+				margin-left: 0 !important;
 			}
+		}
+		&_row {
+			padding-left: 3.2em !important;
+			margin-left: 0;
+			width: 50%;
 			@media (max-width : 767px) {
 				float: none;
 				width: 100%;
-				padding-left: 0;
+				padding-left: 0 !important;
 			}
 		}
 		&_input,
