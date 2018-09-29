@@ -1,30 +1,31 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "../fonts" !default;
 
+$icon-instagram: "\e90e";
+$icon-telegram: "\e90d";
 $icon-arrow: "\e900";
 $icon-calendar: "\e901";
 $icon-dropdown: "\e902";
 $icon-eye: "\e903";
 $icon-facebook: "\e904";
 $icon-house: "\e905";
-$icon-instagram: "\e906";
-$icon-logo: "\e907";
-$icon-m: "\e908";
-$icon-minus: "\e909";
-$icon-play: "\e90a";
-$icon-plus: "\e90b";
-$icon-quote: "\e90c";
-$icon-slide_next: "\e90d";
-$icon-slide_prev: "\e90e";
+$icon-linkedin: "\e906";
+$icon-m: "\e907";
+$icon-minus: "\e908";
+$icon-play: "\e909";
+$icon-plus: "\e90a";
+$icon-slide_next: "\e90b";
+$icon-slide_prev: "\e90c";
 $icon-twitter: "\e90f";
+
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?p0bzlo');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?p0bzlo#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?p0bzlo') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?p0bzlo') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?p0bzlo##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7en0z8');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7en0z8#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7en0z8') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7en0z8') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7en0z8##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -44,6 +45,16 @@ $icon-twitter: "\e90f";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram; 
+  }
+}
 .icon-arrow {
   &:before {
     content: $icon-arrow; 
@@ -74,14 +85,9 @@ $icon-twitter: "\e90f";
     content: $icon-house; 
   }
 }
-.icon-instagram {
+.icon-linkedin {
   &:before {
-    content: $icon-instagram; 
-  }
-}
-.icon-logo {
-  &:before {
-    content: $icon-logo; 
+    content: $icon-linkedin; 
   }
 }
 .icon-m {
@@ -104,11 +110,6 @@ $icon-twitter: "\e90f";
     content: $icon-plus; 
   }
 }
-.icon-quote {
-  &:before {
-    content: $icon-quote; 
-  }
-}
 .icon-slide_next {
   &:before {
     content: $icon-slide_next; 
@@ -128,9 +129,6 @@ $icon-twitter: "\e90f";
 .icon-facebook {
   color: #3A559F;
 }
-.icon-instagram {
-  color: #C536AC;
-}
 .icon-m {
   color: #000;
 }
@@ -140,7 +138,18 @@ $icon-twitter: "\e90f";
 .icon-arrow {
   color: #BCBCBC;
 }
-.icon-quote,
 .icon-play {
   color: $color_primary;
+}
+.icon-telegram {
+  color: #61A8DE;
+}
+.icon-linkedin {
+  color: #0077B7;
+}
+.icon-instagram {
+  color: #C536A4;
+  background: linear-gradient(194.64deg, #6027CB 5.04%, #BB1776 26.52%, #EF5332 46.59%, #F28633 68.43%, #FBDE82 89.55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

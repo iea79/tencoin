@@ -26,35 +26,32 @@ block content
 		.top__wrap
 			.top
 				.top__bg.top__bg_contacts
-				.top__content
-					.top__title.typed
-						.typed__wrap(data-typed="Contacts") 
+				.top__content.top__content_left Contacts
+					//- .top__title.typed
+					//- 	.typed__wrap(data-typed="Contacts") 
 		// end .top
 
-
-		// begin .getintouch
-		.getintouch__wrap.out
-			.getintouch
-				.getintouch__left
-					h2.getintouch__left_title.typed.block__title
-						.typed__wrap(data-typed="Get in touch") 
-					.getintouch__left_contacts
+		//begin contacts
+		.page.page__contacts
+			.page__left
+				h2.typed.block__title
+					.typed__wrap(data-typed="Get in touch")
+			.page__right
+				.contacts
+					.contacts__left
 						.getintouch__left_row
 							.getintouch__left_row_par Phone:
-							.getintouch__left_row_value +7 586 969 6363
+							.getintouch__left_row_value +356 99392836
 						.getintouch__left_row
 							.getintouch__left_row_par E-mail:
 							.getintouch__left_row_value support@tencoins.org
 						.getintouch__left_row
 							.getintouch__left_row_par Address:
-							.getintouch__left_row_value Tencoins Ltd, 75 Triq I-Abate Rigord Level 2, Ta’ Xbiex XBX 1102 Malta
-						.getintouch__left_row
-							.getintouch__left_row_par Telegram:
-							.getintouch__left_row_value @tencoins_org
+							.getintouch__left_row_value Tencoins Ltd  <br>Second floor, Melita Court, <br> Giuseppe Cali Street  <br>C/N Abate Rigord Street  <br>Ta' Xbiex, Malta
 						.getintouch__left_row.last
 							.getintouch__left_row_par Follow us:
 							.getintouch__left_row_value
-								ul.follow__soc.getintouch__soc
+								ul.follow__soc.getintouch__soc.contacts
 									li.follow__soc_item
 										a.follow__soc_link(href="#")
 											span.icon-m.getintouch__soc_icon
@@ -67,23 +64,42 @@ block content
 									li.follow__soc_item
 										a.follow__soc_link(href="#")
 											span.icon-instagram.getintouch__soc_icon
-				.getintouch__form
-					.getintouch__form_list.grid.grid__2
-						.form__row.getintouch__form_row
-							input.getintouch__form_input(type="text", id="f1")
-							label.form__label(for="f1") Name
-						.form__row.getintouch__form_row
-							input.getintouch__form_input(type="text", id="f4")
-							label.form__label(for="f4") Surname
-						.form__row.getintouch__form_row
-							input.getintouch__form_input(type="tel", id="f2")
-							label.form__label(for="f2") Phone
-						.form__row.getintouch__form_row
-							input.getintouch__form_input(type="email", id="f5")
-							label.form__label(for="f5") E-mail
-						.form__row.getintouch__form_row
-							textarea.getintouch__form_textarea(id="f3")
-							label.form__label(for="f3") Your message
-						.form__row.getintouch__form_row
-							button.getintouch__form_btn.btn Send
-		// end .getintouch
+									li.follow__soc_item
+										a.follow__soc_link(href="#")
+											span.icon-linkedin.getintouch__soc_icon
+									li.follow__soc_item
+										a.follow__soc_link(href="#")
+											span.icon-telegram.getintouch__soc_icon
+					.contacts__right
+						.contacts__map(id="map")
+
+				//- .contacts__form
+				//- 	.contacts__row.grid.grid__4
+				//- 		.contacts__form_item
+
+				//- 		.contacts__form_item
+				//- 		.contacts__form_item
+				//- 		.contacts__form_item
+				//- 	.contacts__row
+				.contacts__form
+					.contacts__form_list.grid.grid__4
+						.form__row.contacts__form_row
+							input.contacts__form_input(type="text", id="f1")
+							label.form__label.contacts__label(for="f1") Name
+						.form__row.contacts__form_row
+							input.contacts__form_input(type="text", id="f4")
+							label.form__label.contacts__label(for="f4") Surname
+						.form__row.contacts__form_row
+							input.contacts__form_input(type="tel", id="f2")
+							label.form__label.contacts__label(for="f2") Phone
+						.form__row.contacts__form_row
+							input.contacts__form_input(type="email", id="f5")
+							label.form__label.contacts__label(for="f5") E-mail
+					.contacts__form_list
+						.form__row.contacts__form_row.contacts__form_left
+							textarea.contacts__form_textarea(id="f3")
+							label.form__label.contacts__label(for="f3") Your message
+						.form__row.contacts__form_row.contacts__form_right
+							button.contacts__form_btn.btn Send
+
+		//end contacts

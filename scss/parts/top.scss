@@ -91,6 +91,11 @@
 		vertical-align: middle;
 		position: relative;
 		z-index: 5;
+		&_left {
+			font-size: 3.45em;
+			text-align: left;
+			font-weight: 700;
+		}
 	}
 	&__h {
 		margin-bottom: 0.4em;

@@ -1,7 +1,7 @@
 .product {
 	width: 100%;
 	padding-top: 0.6em;
-	margin-bottom: 2.8em;
+	margin-bottom: 0.5em;
 	&:after {
 		content: '';
 		clear: both;
@@ -11,15 +11,17 @@
 		margin-top: 0.8em;
 		margin-bottom: 3em;
 	}
-	.product__description {
+	&__description {
 		width: 50%;
 		float: left;
 		padding-right: 2.5%;
+		@media (max-width : 1199px) {
+			width: 100%;
+			float: none;
+			padding-right: 0;
+		}
 	}
 	&__img {
-		width: 100%;
-		height: auto;
-		display: block;
 		&_wrap {
 			overflow: hidden;
 		}

@@ -146,6 +146,12 @@
 		    &:hover {
 		    	text-decoration: underline;
 		    }
+		    @media (max-width: 768px) {
+				min-height: 5.5em;
+			}
+			@media (max-width: 767px) {
+				min-height: auto;
+			}
 		}
 		&_text {
 			min-height: 4.15em;

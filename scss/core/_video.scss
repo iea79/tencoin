@@ -11,8 +11,9 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: 100%;
-			height: 100%;
+			z-index: 5;
+			width: 100% !important;
+			height: 100% !important;
 		}
 	}
 	&__prev {
@@ -22,11 +23,23 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	z-index: 1;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background-color: $color_primary;
+		// 	opacity: .7;
+		// }
 	}
 	&__play {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		z-index: 5;
 		width: 5.4em;
 		height: 5.4em;
 		padding-right: 1.3em;

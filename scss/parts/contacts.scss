@@ -1,0 +1,119 @@
+.page__contacts {
+	padding-top: 4.7em;
+	@media (max-width : 768px) {
+		padding-top: 3.2em;
+	}
+}
+
+.contacts {
+	width: 100%;
+	margin-bottom: 4em;
+	display: table;
+	@extend %clear_a;
+	@media (max-width : 1199px) {
+		display: block;
+	}
+	&__left {
+		padding-top: 1em;
+		padding-bottom: 3em;
+		width: 35%;
+		display: table-cell;
+		@media (max-width : 1199px) {
+			width: 100%;
+			display: block;
+			padding-bottom: 1em;
+		}
+	}
+	&__right {
+		position: relative;
+		width: 65%;
+		display: table-cell;
+		@media (max-width : 1199px) {
+			width: 100%;
+			display: block;
+			min-height: 21.5em;
+		}
+	}
+	&__map {
+		position: absolute;
+		top: 0;
+		z-index: 5;
+		width: 100%;
+		height: 21.5em;
+		display: block;
+	}
+	&__label {
+		color: #808080;
+		font-weight: 300;
+	}
+	&__form {
+		&_list  {
+			margin-left: -3.2em !important;
+			@extend %clear_a;
+			@media (max-width : 767px) {
+				margin-left: 0 !important;
+			}
+		}
+		&_row {
+			padding-left: 3.2em !important;
+			margin-left: 0;
+			@extend %clear_a;
+			&.form__row {
+				margin-bottom: 3.1em !important;
+			}
+			@media (max-width : 767px) {
+				float: none;
+				width: 100%;
+				padding-left: 0 !important;
+			}
+		}
+		&_input,
+		&_textarea {
+			width: 100%;
+			color: #666 !important;
+			background-color: #fff !important;
+			border: 0;
+			border-bottom: 1px solid #E6E6E6 !important;
+		}
+		&_textarea {
+			height: 4em;
+		}
+		&_btn {
+			margin-top: 0.8em;
+			padding: 0.9em 3.5em;
+			color: #fff;
+			font-size: 1em;
+			font-weight: 700;
+			background-color: $color_primary;
+			border: 1px solid transparent;
+			@include border-radius(1.563em);
+			&:hover,
+			&:focus {
+				opacity: 0.8;
+				background-color: #fff;
+				border: 1px solid #E6E6E6;
+			}
+			@media (max-width : 767px) {
+				margin-top: 0;
+			}
+		}
+		&_left {
+			width: 75%;
+			float: left;
+			@media (max-width : 1199px) {
+				width: 50%;
+			}
+			@media (max-width : 767px) {
+				width: 100%;
+				float: none;
+			}
+		}
+		&_right {
+			padding-left: 3.2em;
+			overflow: hidden;
+			@media (max-width : 767px) {
+				padding-left: 0;
+			}
+		}
+	}
+}

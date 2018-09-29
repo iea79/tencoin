@@ -22,7 +22,7 @@ block content
 			li.breadcrumb__separator
 				span.icon-arrow
 			li
-				a(href="#") History of money
+				a(href="#") P2P exchange platform
 		// end .breadcramb
 
 
@@ -30,9 +30,9 @@ block content
 		.top__wrap
 			.top
 				.top__bg.top__bg_product
-				.top__content
-					.top__title.typed
-						.typed__wrap(data-typed="P2P exchange platform") 
+				.top__content.top__content_left P2P exchange platform
+					//- .top__title.typed
+					//- 	.typed__wrap(data-typed="P2P exchange platform") 
 		// end .top
 
 
@@ -71,20 +71,23 @@ block content
 
 						p The platform targets both professional traders and newcomers to the market. Its aim is to make deals simple, understandable and enjoyable.
 
-						h3.next.line Trading has never been so easy.
+						h6 Trading has never been so easy.
+
 					.product__img_wrap
 						img.product__img(src="img/iPhone7_1_upd.jpg", alt="iPhone7_1")
 
 			
-				.video__wrapper.js_youtube(id="ID_VIDEO")
-					<iframe width="100%" height="39.38em" src="https://www.youtube-nocookie.com/embed/3DXfEl0ADBE?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				.video__wrapper.js_youtube(id="3DXfEl0ADBE")
+					img.video__prev(src="img/video_bg.jpg", alt="video")
 
-				.article__share
-					span.article__share_p Share
-					a.article__link(href="#") repost
-						span.article__link_icon
+				.line__block
+
+				.share
+					span.share__p Share
+					a.share__link(href="#") repost
+						span.share__link_icon
 							.icon-facebook
-					a.article__link(href="#") twit
-						span.article__link_icon
+					a.share__link(href="#") twit
+						span.share__link_icon
 							.icon-twitter
 			// end Article

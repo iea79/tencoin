@@ -1,7 +1,7 @@
 /* Follow
 -------------------------------------------------------------------------------*/
 .follow {
-	padding: 1.3em 0 6.5em;
+	padding: 1.3em 0 5.4em;
 	@extend %clear_a;
 	@media (max-width : 1024px) {
 		padding: 1.3em 0 4em;
@@ -31,6 +31,7 @@
 		&_item {
 			float: left;
 			margin-left: 1.1em;
+			margin-bottom: 1.1em;
 			@media (max-width : 767px) {
 				margin-left: 1em;
 				&:first-child {
